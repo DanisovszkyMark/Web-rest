@@ -10,7 +10,7 @@ BEGIN
     DECLARE userId BIGINT;
     SET token = "";
     
-    SET canLogin = (SELECT COUNT(*) FROM users WHERE (username = p_username OR email = p_username) AND password = p_password AND enabled = 1) >= 1;
+    SET canLogin = (SELECT COUNT(*) FROM users WHERE (username = p_username OR email = p_username) AND password = SHA(p_password) AND enabled = 1) >= 1;
     
     IF(canLogin = TRUE) THEN
         SET v_token = SUBSTRING(MD5(RAND()) FROM 1 FOR 32);

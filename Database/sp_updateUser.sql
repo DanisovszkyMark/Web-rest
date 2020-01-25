@@ -17,7 +17,7 @@ BEGIN
     IF(canUpdate = TRUE) THEN
         SET alreadyUsed = (SELECT COUNT(*) FROM users WHERE id != p_id AND (username = p_username OR email = p_email)) >= 1;
         IF(alreadyUsed = FALSE) THEN
-			UPDATE users SET username = p_username, email = p_email, password = p_password WHERE id = p_id;
+			UPDATE users SET username = p_username, email = p_email, password = SHA(p_password) WHERE id = p_id;
 			SET success = TRUE;
         END IF;
     END IF;
