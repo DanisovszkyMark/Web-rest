@@ -4,6 +4,24 @@ import javax.persistence.*;
 import java.security.InvalidParameterException;
 
 @Entity
+@Table(name = "Tokens")
+@NamedStoredProcedureQuery(
+        name = "login",
+        procedureName = "login",
+        parameters = {
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_username"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_password"),
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = String.class, name = "token")
+        }
+)
+@NamedStoredProcedureQuery(
+        name = "logout",
+        procedureName = "logout",
+        parameters = {
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_tokenKey"),
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "success")
+        }
+)
 public class Token {
 
     @Id

@@ -5,6 +5,52 @@ import java.security.InvalidParameterException;
 import org.apache.commons.validator.routines.EmailValidator;
 
 @Entity
+@Table(name = "Users")
+@NamedStoredProcedureQuery(
+        name = "updateUser",
+        procedureName = "updateUser",
+        parameters = {
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "p_id"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_username"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_email"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_password"),
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "success")
+        }
+)
+@NamedStoredProcedureQuery(
+        name = "deleteUser",
+        procedureName = "deleteUser",
+        parameters = {
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "p_id"),
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "success")
+        }
+)
+@NamedStoredProcedureQuery(
+        name = "blockUser",
+        procedureName = "blockUser",
+        parameters = {
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "p_id"),
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "success")
+        }
+)
+@NamedStoredProcedureQuery(
+        name = "activateUser",
+        procedureName = "activateUser",
+        parameters = {
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_activationKey"),
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "success")
+        }
+)
+@NamedStoredProcedureQuery(
+        name = "registration",
+        procedureName = "registration",
+        parameters = {
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_username"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_email"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_password"),
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "success")
+        }
+)
 public class User {
 
     @Id
