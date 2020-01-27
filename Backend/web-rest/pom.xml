@@ -69,5 +69,14 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.11</version>
     </dependency>
+    <dependency>
+      <groupId>commons-validator</groupId>
+      <artifactId>commons-validator</artifactId>
+      <version>1.5.1</version>
+    </dependency>
+    <dependency>
+      <groupId>io.thorntail</groupId>
+      <artifactId>cdi</artifactId>
+    </dependency>
   </dependencies>
 </project>
