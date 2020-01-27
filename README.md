@@ -10,6 +10,8 @@ Fronted - Angular
 
 Database - MySql
 
+A backend és frontend JSON-t használva kommunikál egymással.
+
 # Adatbázis
 
 <p align="center">
@@ -33,3 +35,19 @@ Tárolt eljárások:
 - deleteToken(p_tokenKey): boolean
 - login(p_username, p_password): varchar(32)
 - logout(p_tokenKey): boolean
+
+# URI-k (backend):
+
+| URI | Erőforrás | Leírás | Művelet | Válasz |
+| --- | --------- | ------ | ------- | ------ |
+| /auth/reg | RegistrationRequest | Új user felvétele az adatbázisba | POST | 201, 409 |
+| /auth/activation/{key} | - | User aktiválása a kulcs alapján | PUT | 200, 404 |
+| /auth/login | LoginRequest | User-hez token rendelés | POST | 201, 404 |
+| * /auth/logout | - | Userhez tartozó token törlése (csak az aktuális) | DELETE | 200, 404, 503 |
+| * /auth/block/{id} | - | User frissítése | PUT | 200, 404, 503 |
+| * /users/ | UserDTO lista | Vissza adja az összes felhasználót | GET | 200, 404, 503 |
+| * /users/{id} | UserDTO | User visszaadása id alapján | GET | 200, 404, 503 |
+| * /users/{id} | UpdateRequest | User frissítése | PUT | 200, 404, 503 |
+| * /users/{id} | - | User törlése | DELETE | 200, 404, 503 |
+
+(*) Token alapú azonosítás után érhető el a szolgáltatás.
