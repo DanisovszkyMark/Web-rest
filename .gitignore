@@ -187,3 +187,5 @@ Backend/web-rest/target/web-rest/WEB-INF/lib/wildfly-common-1.5.1.Final.jar
 Backend/web-rest/target/web-rest/WEB-INF/lib/xnio-api-3.3.8.Final.jar
 Backend/web-rest/target/web-rest/WEB-INF/lib/xnio-nio-3.3.8.Final.jar
 Backend/web-rest/web-rest.iml
+Backend/web-rest/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_6_0.xml
+Backend/web-rest/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_11.xml

@@ -1,0 +1,8 @@
+swarm:
+  datasources:
+    data-sources:
+      MySql:
+        driver-name: mysql
+        connection-url: jdbc:mysql://localhost:3306/restdb
+        user-name: root
+        password: admin
