@@ -226,3 +226,12 @@ Backend/web-rest/target/web-rest/WEB-INF/lib/jakarta.inject-api-1.0.jar
 Backend/web-rest/target/web-rest/WEB-INF/lib/jakarta.validation-api-2.0.2.jar
 Backend/web-rest/target/web-rest/WEB-INF/lib/mysql-connector-java-8.0.11.jar
 Backend/web-rest/target/web-rest/WEB-INF/lib/protobuf-java-2.6.0.jar
+Backend/web-rest/target/thorntail7710942246477437077-cp.txt
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/database/AuthenticationManager.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/database/UsersManager.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/dto/UserDTO.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/pojo/LoginRequest.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/pojo/RegistrationRequest.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/pojo/UpdateRequest.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/resource/AuthenticationResource.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/resource/UserResource.class

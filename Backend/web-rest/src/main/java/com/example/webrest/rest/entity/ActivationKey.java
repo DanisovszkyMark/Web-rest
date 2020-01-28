@@ -3,6 +3,8 @@ package com.example.webrest.rest.entity;
 import javax.persistence.*;
 import java.security.InvalidParameterException;
 
+//nem használt entity
+
 @Entity
 public class ActivationKey {
 

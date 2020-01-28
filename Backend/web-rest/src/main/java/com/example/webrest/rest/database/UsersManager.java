@@ -2,11 +2,12 @@ package com.example.webrest.rest.database;
 
 import com.example.webrest.rest.entity.User;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.StoredProcedureQuery;
 import javax.transaction.Transactional;
-import javax.ws.rs.NotFoundException;
 import java.util.List;
 
+@ApplicationScoped
 public class UsersManager extends BaseDatabaseManager {
 
     public List<User> getUsers(){

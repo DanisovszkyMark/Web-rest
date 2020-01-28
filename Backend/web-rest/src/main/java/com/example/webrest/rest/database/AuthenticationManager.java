@@ -1,8 +1,10 @@
 package com.example.webrest.rest.database;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.StoredProcedureQuery;
 import javax.transaction.Transactional;
 
+@ApplicationScoped
 public class AuthenticationManager extends BaseDatabaseManager {
 
     @Transactional
@@ -51,5 +53,14 @@ public class AuthenticationManager extends BaseDatabaseManager {
         query.execute();
 
         return (Boolean)query.getOutputParameterValue("success");
+    }
+
+    @Transactional
+    public Boolean ExistsToken(String tokenKey){
+        StoredProcedureQuery query = this.getEntityManager().createNamedStoredProcedureQuery("existsToken");
+        query.setParameter("p_tokenKey", tokenKey);
+        query.execute();
+
+        return (Boolean)query.getOutputParameterValue("ex");
     }
 }
