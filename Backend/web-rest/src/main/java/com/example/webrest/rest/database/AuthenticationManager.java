@@ -8,14 +8,14 @@ import javax.transaction.Transactional;
 public class AuthenticationManager extends BaseDatabaseManager {
 
     @Transactional
-    public boolean registration(String username, String password, String email){
+    public String registration(String username, String password, String email){
         StoredProcedureQuery query = this.getEntityManager().createNamedStoredProcedureQuery("registration");
         query.setParameter("p_username", username);
         query.setParameter("p_password", password);
         query.setParameter("p_email", email);
         query.execute();
 
-        return (Boolean)query.getOutputParameterValue("success");
+        return (String)query.getOutputParameterValue("activationKey");
     }
 
     @Transactional
@@ -63,4 +63,5 @@ public class AuthenticationManager extends BaseDatabaseManager {
 
         return (Boolean)query.getOutputParameterValue("ex");
     }
+
 }

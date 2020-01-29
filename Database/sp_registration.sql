@@ -3,13 +3,12 @@ CREATE PROCEDURE registration(
 		IN p_username VARCHAR(50),
         IN p_email VARCHAR(150),
         IN p_password VARCHAR(50),
-        OUT success BOOLEAN)
+        OUT activationKey VARCHAR(12))
 DETERMINISTIC
 BEGIN
     DECLARE canRegister BOOL;
     DECLARE userId BIGINT;
     DECLARE v_activationKey VARCHAR(12);
-    SET success = FALSE;
     
     -- Vizsgálat: egyedi-e
     SET canRegister = (SELECT COUNT(*) FROM Users WHERE username = p_username OR email = p_email) = 0;
@@ -30,7 +29,7 @@ BEGIN
 		INSERT INTO activationKeys (activationKey, userId)
 			VALUES(v_activationKey, userId);
         
-        SET success = TRUE;
+        SET activationKey = v_activationKey;
 	END IF;
 END $$
  

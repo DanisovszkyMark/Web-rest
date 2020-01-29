@@ -48,7 +48,7 @@ import org.apache.commons.validator.routines.EmailValidator;
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_username"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_email"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_password"),
-                @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "success")
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = String.class, name = "activationKey")
         }
 )
 public class User {

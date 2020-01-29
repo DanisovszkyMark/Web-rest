@@ -1,5 +1,6 @@
 package com.example.webrest.rest.resource;
 
+import com.example.webrest.rest.classes.EmailSender;
 import com.example.webrest.rest.database.AuthenticationManager;
 import com.example.webrest.rest.pojo.LoginRequest;
 import com.example.webrest.rest.pojo.RegistrationRequest;
@@ -14,11 +15,25 @@ public class AuthenticationResource {
     @Inject
     private AuthenticationManager authenticationManager;
 
+    @Inject
+    private EmailSender emailSender;
+
     @POST
     @Path("/reg")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response registration(RegistrationRequest registrationRequest){
-        if(this.authenticationManager.registration(registrationRequest.getUsername(), registrationRequest.getPassword(), registrationRequest.getEmail())){
+        String activationKey = this.authenticationManager.registration(registrationRequest.getUsername(), registrationRequest.getPassword(), registrationRequest.getEmail());
+
+        if(activationKey != null){
+            new Thread(() -> {
+                try {
+                    emailSender.SendMail(registrationRequest.getEmail(), "Fiók aktiválása", registrationRequest.getUsername(), "Fiókodat az alábbi linkre kattintva aktiválhatod: http://localhost:4200/auth/activation/" + activationKey);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }).start();
+
             return Response.status(201).build();
         }
 
