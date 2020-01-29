@@ -56,7 +56,7 @@ public class AuthenticationManager extends BaseDatabaseManager {
     }
 
     @Transactional
-    public Boolean ExistsToken(String tokenKey){
+    public Boolean tokenIsValid(String tokenKey){
         StoredProcedureQuery query = this.getEntityManager().createNamedStoredProcedureQuery("existsToken");
         query.setParameter("p_tokenKey", tokenKey);
         query.execute();

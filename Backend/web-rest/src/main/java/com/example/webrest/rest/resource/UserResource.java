@@ -4,6 +4,8 @@ import com.example.webrest.rest.database.UsersManager;
 import com.example.webrest.rest.dto.UserDTO;
 import com.example.webrest.rest.entity.User;
 import com.example.webrest.rest.pojo.UpdateRequest;
+import com.example.webrest.rest.security.AuthenticationRequired;
+
 import javax.inject.Inject;
 import javax.persistence.NoResultException;
 import javax.ws.rs.*;
@@ -20,6 +22,7 @@ public class UserResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @AuthenticationRequired
     public List<UserDTO> getUsers() {
 
         List<UserDTO> userDTOs = new ArrayList<>();
@@ -42,6 +45,7 @@ public class UserResource {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
+    @AuthenticationRequired
     public UserDTO getUser(@PathParam("id") long id){
         User user;
 
@@ -58,6 +62,7 @@ public class UserResource {
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON) //415 ha unsupported media type
+    @AuthenticationRequired
     public Response updateUser(@PathParam("id") long id, UpdateRequest updateRequest){
         if (this.usersManager.updateUser(id, updateRequest.getUsername(), updateRequest.getPassword(), updateRequest.getEmail())) {
             return Response.status(200).build();
@@ -68,6 +73,7 @@ public class UserResource {
 
     @DELETE
     @Path("/{id}")
+    @AuthenticationRequired
     public Response deleteUser(@PathParam("id") long id){
         if(this.usersManager.deleteUser(id)){
             return Response.status(200).build();

@@ -262,3 +262,17 @@ Backend/web-rest/target/classes/com/example/webrest/rest/resource/UserResource.c
 Backend/web-rest/target/thorntail2517829221014377510-cp.txt
 Backend/web-rest/target/classes/com/example/webrest/rest/database/AuthenticationManager.class
 Backend/web-rest/target/thorntail1076251866211222487-cp.txt
+Backend/web-rest/target/classes/com/example/webrest/rest/database/AuthenticationManager.class
+Backend/web-rest/target/classes/com/example/webrest/rest/pojo/RegistrationRequest.class
+Backend/web-rest/target/classes/com/example/webrest/rest/resource/AuthenticationResource.class
+Backend/web-rest/target/classes/com/example/webrest/rest/resource/UserResource.class
+Backend/web-rest/target/classes/com/example/webrest/rest/database/AuthenticationManager.class
+Backend/web-rest/target/classes/com/example/webrest/rest/pojo/RegistrationRequest.class
+Backend/web-rest/target/classes/com/example/webrest/rest/resource/AuthenticationResource.class
+Backend/web-rest/target/classes/com/example/webrest/rest/resource/UserResource.class
+Backend/web-rest/target/classes/com/example/webrest/rest/security/AuthenticationFilter.class
+Backend/web-rest/target/classes/com/example/webrest/rest/security/AuthenticationRequired.class
+Backend/web-rest/target/thorntail2570389316557567115-cp.txt
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/security/Authenticate.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/security/AuthenticationFilter.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/security/AuthenticationRequired.class

@@ -4,6 +4,8 @@ import com.example.webrest.rest.classes.EmailSender;
 import com.example.webrest.rest.database.AuthenticationManager;
 import com.example.webrest.rest.pojo.LoginRequest;
 import com.example.webrest.rest.pojo.RegistrationRequest;
+import com.example.webrest.rest.security.AuthenticationRequired;
+
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -57,6 +59,7 @@ public class AuthenticationResource {
 
     @DELETE
     @Path("/logout")
+    @AuthenticationRequired
     public Response logout(@HeaderParam("token") String token){
         if(this.authenticationManager.logout(token)){
             return Response.status(200).build();
@@ -77,6 +80,7 @@ public class AuthenticationResource {
 
     @PUT
     @Path("/block/{id}")
+    @AuthenticationRequired
     public Response block(@PathParam("id") long id){
         if(this.authenticationManager.blockUser(id)){
             return Response.status(200).build();
