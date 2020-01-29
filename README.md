@@ -1,6 +1,18 @@
 # Web-rest
 
-Ebben a repositrotyban nyomonkövethető az InnoviTech próbafeladatának megoldása lépésekre bontva. Jól láthatóak a tervezési és feljesztési lépések.
+Ebben a repositrotyban nyomonkövethető egy web alapú REST alkalmazás lefejlesztése melyben token alapú authentikációt valósítok meg. A szolgáltatások, melyeket meg kell valósítanom:
+
+- Bejelentkezés
+
+- Kiléptetés
+
+- Userek listázása
+
+- CRUD műveletek
+
+- Userek tárolása adatbázisban
+
+- Néhány szolgáltatást csak bejelentkezés után lehessen elérni
 
 # Használt technológiák
 
@@ -43,12 +55,12 @@ Tárolt eljárások:
 | /auth/reg | RegistrationRequest | Új user felvétele az adatbázisba | POST | 201, 409, 500 |
 | /auth/activation/{key} | - | User aktiválása a kulcs alapján | PUT | 200, 404, 500 |
 | /auth/login | LoginRequest | User-hez token rendelés | POST | 201, 404, 500 |
-| * /auth/logout | - | Userhez tartozó token törlése (csak az aktuális) | DELETE | 200, 404, 500, 503 |
-| * /auth/block/{id} | - | User frissítése | PUT | 200, 404, 500, 503 |
-| * /users/ | UserDTO lista | Vissza adja az összes felhasználót | GET | 200, 404, 500, 503 |
-| * /users/{id} | UserDTO | User visszaadása id alapján | GET | 200, 404, 500, 503 |
-| * /users/{id} | UpdateRequest | User frissítése | PUT | 200, 409, 500, 503 |
-| * /users/{id} | - | User törlése | DELETE | 200, 404, 500, 503 |
+| * /auth/logout | - | Userhez tartozó token törlése (csak az aktuális) | DELETE | 200, 401, 404, 500 |
+| * /auth/block/{id} | - | User frissítése | PUT | 200, 401, 404, 500 |
+| * /users/ | UserDTO lista | Vissza adja az összes felhasználót | GET | 200, 401, 404, 500 |
+| * /users/{id} | UserDTO | User visszaadása id alapján | GET | 200, 401, 404, 500 |
+| * /users/{id} | UpdateRequest | User frissítése | PUT | 200, 401, 409, 500 |
+| * /users/{id} | - | User törlése | DELETE | 200, 401, 404, 500 |
 
 _(*) Token alapú azonosítás után érhető el a szolgáltatás._
 
@@ -56,10 +68,10 @@ _(200) Sikeres kérés._
 
 _(201) Sikeres kérés, az objektum létrejött._
 
+_(401) Nem azonosított._
+
 _(404) A kért erőforrás nem létezik._
 
-_(404) Konfliktus. A kért erőforrás már létezik._
+_(409) Konfliktus. A kért erőforrás már létezik._
 
 _(500) Belső szerverhiba. Nem kezelt kivétel._
-
-_(503) Nem azonosított._
