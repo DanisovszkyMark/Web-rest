@@ -75,3 +75,48 @@ _(404) A kért erőforrás nem létezik._
 _(409) Konfliktus. A kért erőforrás már létezik._
 
 _(500) Belső szerverhiba. Nem kezelt kivétel._
+
+# Frontend
+
+Bejelentkező ablak:
+
+<p align="center">
+<img src="Documentation/loginPage.png" width="450">
+</p>
+
+Regisztrációs ablak:
+
+<p align="center">
+<img src="Documentation/regPage.png" width="450">
+</p>
+
+Sikeres regisztráció:
+
+<p align="center">
+<img src="Documentation/regSuccessfull.png" width="450">
+</p>
+
+Bal menü:
+
+<p align="center">
+<img src="Documentation/leftMenu.png" width="450">
+</p>
+
+Felhasználók:
+
+<p align="center">
+<img src="Documentation/users.png" width="450">
+</p>
+
+Felhasználó frissítése:
+
+<p align="center">
+<img src="Documentation/updateUser.png" width="250">
+</p>
+
+Megerősítés:
+
+<p align="center">
+<img src="Documentation/areYouSure.png" width="250">
+</p>
+
