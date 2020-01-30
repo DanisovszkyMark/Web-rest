@@ -1,1 +1,56 @@
-<p>reg-page works!</p>
+<style>
+    body {
+        background-image: url(assets/images/bg01.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+</style>
+
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="regCard">
+        <div class="avatarContainer">
+            <img src="assets/images/avatar.png" class="avatar">
+        </div>
+
+
+        <form [formGroup]="registrationForm">
+            <div class="inputContainer">
+                <i class="fa fa-user icon"></i>
+                <input class="inputField" type="text" placeholder="Username" formControlName="usernameControl">
+            </div>
+
+            <div class="inputContainer">
+                <i class="fa fa-envelope icon"></i>
+                <input class="inputField" type="text" placeholder="Email" name="email" formControlName="emailControl">
+            </div>
+
+            <div class="inputContainer">
+                <i class="fa fa-lock icon"></i>
+                <input class="inputField" [type]="showPassword? 'text' : 'password'" id="passwordField" placeholder="Password" formControlName="passwordControl">
+            </div>
+
+            <div class="inputContainer">
+                <i class="fa fa-lock icon"></i>
+                <input class="inputField" [type]="showPassword? 'text' : 'password'" id="passwordAgainField" placeholder="Password again" formControlName="passwordAgainControl">
+            </div>
+        </form>
+
+        <label class="showPasswordContainer">Show Password
+          <input type="checkbox" [(ngModel)]="showPassword">
+          <span class="checkmark"></span>
+        </label>
+
+        <p [style.display]="showError ? 'block' : 'none'">{{errorMessage}}</p>
+
+        <div class="buttonContainer">
+            <button type="submit" (click)="submitReg()">Sign Up</button>
+        </div>
+
+        <label>Already have an account?</label>
+        <a routerLink="/login"> Log In </a>
+    </div>
+    <app-footer></app-footer>
+</body>

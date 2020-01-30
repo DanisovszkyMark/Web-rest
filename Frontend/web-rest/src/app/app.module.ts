@@ -11,6 +11,9 @@ import { RegPageComponent } from './pages/reg-page/reg-page.component';
 import { RegSuccessfullComponent } from './components/reg-successfull/reg-successfull.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
 
+import { MatDialogModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +29,10 @@ import { UsersPageComponent } from './pages/users-page/users-page.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  entryComponents: [RegSuccessfullComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
