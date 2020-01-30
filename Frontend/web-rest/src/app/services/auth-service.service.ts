@@ -12,7 +12,7 @@ export class AuthServiceService {
     private httpClient: HttpClient
   ) { }
 
-  login(usernameOrEmail: string, password: string): Observable<any>{
+  public login(usernameOrEmail: string, password: string): Observable<any>{
     return this.httpClient.post('http://localhost:8080/auth/login', {
       username: usernameOrEmail,
       password,
