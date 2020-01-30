@@ -1,0 +1,35 @@
+.regSuccessCard {
+    width: 25%;
+    background-color: white;
+    border-style: solid;
+    border-color: dodgerblue;
+    position: absolute;
+    left: 37.5%;
+    top: 40%;
+    z-index: 10;
+}
+
+.envelopeIcon {
+    color: green;
+    min-width: 50px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.regSuccessCardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.regSuccessCardBody {
+    padding: 10px;
+}
+
+.headerString {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
