@@ -21,7 +21,7 @@ export class AuthServiceService {
     );
   }
 
-  registration(username: string, email: string, password: string): Observable<any>{
+  public registration(username: string, email: string, password: string): Observable<any>{
     return this.httpClient.post('http://localhost:8080/auth/reg', {
       username,
       email,
@@ -29,7 +29,7 @@ export class AuthServiceService {
     });
   }
 
-  logout(tokenKey: string): Observable<any>{
+  public logout(tokenKey: string): Observable<any>{
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Token', tokenKey);
@@ -39,11 +39,11 @@ export class AuthServiceService {
     });
   }
 
-  activation(activationKey: string): Observable<any>{
+  public activation(activationKey: string): Observable<any>{
     return this.httpClient.put("http://localhost:8080/auth/activation/" + activationKey, null);
   }
 
-  block(id: bigint): Observable<any>{
+  public block(id: bigint): Observable<any>{
     return this.httpClient.put("http://localhost:8080/auth/block/" + id, null);
   }
 }

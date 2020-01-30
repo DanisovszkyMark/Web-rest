@@ -1,0 +1,31 @@
+.activationBadCard {
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20%;
+}
+
+.iconContainer {
+    color: red;
+    text-align: center;
+    font-size: 5.5rem;
+}
+
+.activationBadCardHeader {
+    text-align: center;
+}
+
+a:link {
+    color: dodgerblue;
+}
+
+a:visited {
+    color: dodgerblue;
+}
