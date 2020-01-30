@@ -29,14 +29,14 @@ public class AuthenticationResource {
         if(activationKey != null){
             new Thread(() -> {
                 try {
-                    emailSender.SendMail(registrationRequest.getEmail(), "Fiók aktiválása", registrationRequest.getUsername(), "Fiókodat az alábbi linkre kattintva aktiválhatod: http://localhost:4200/auth/activation/" + activationKey);
+                    emailSender.SendMail(registrationRequest.getEmail(), "Fiók aktiválása", registrationRequest.getUsername(), "Fiókodat az alábbi linkre kattintva aktiválhatod: http://localhost:4200/activation/" + activationKey);
 
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }).start();
 
-            return Response.status(201).build();
+            return Response.ok(201).build();
         }
 
         return Response.status(409).build();
@@ -62,7 +62,7 @@ public class AuthenticationResource {
     @AuthenticationRequired
     public Response logout(@HeaderParam("token") String token){
         if(this.authenticationManager.logout(token)){
-            return Response.status(200).build();
+            return Response.ok(200).build();
         }
 
         return Response.status(404).build();
@@ -72,7 +72,7 @@ public class AuthenticationResource {
     @Path("/activation/{activationKey}")
     public Response activateUser(@PathParam("activationKey") String activationKey){
         if(this.authenticationManager.activateUser(activationKey)){
-            return Response.status(200).build();
+            return Response.ok(200).build();
         }
 
         return Response.status(404).build();
@@ -83,7 +83,7 @@ public class AuthenticationResource {
     @AuthenticationRequired
     public Response block(@PathParam("id") long id){
         if(this.authenticationManager.blockUser(id)){
-            return Response.status(200).build();
+            return Response.ok(200).build();
         }
 
         return Response.status(404).build();

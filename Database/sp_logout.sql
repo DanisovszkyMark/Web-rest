@@ -11,6 +11,8 @@ BEGIN
     
     IF(canLogout = TRUE) THEN
 		DELETE FROM tokens WHERE tokenKey = p_tokenKey;
+        
+        SET success = TRUE;
     END IF;
 END $$
  

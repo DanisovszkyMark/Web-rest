@@ -65,7 +65,7 @@ public class UserResource {
     @AuthenticationRequired
     public Response updateUser(@PathParam("id") long id, UpdateRequest updateRequest){
         if (this.usersManager.updateUser(id, updateRequest.getUsername(), updateRequest.getPassword(), updateRequest.getEmail())) {
-            return Response.status(200).build();
+            return Response.ok(200).build();
         }
 
         return Response.status(409).build();
@@ -76,7 +76,7 @@ public class UserResource {
     @AuthenticationRequired
     public Response deleteUser(@PathParam("id") long id){
         if(this.usersManager.deleteUser(id)){
-            return Response.status(200).build();
+            return Response.ok(200).build();
         }
 
         return Response.status(404).build();

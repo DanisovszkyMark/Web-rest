@@ -294,3 +294,15 @@ Frontend/web-rest/e2e/src/app.e2e-spec.ts
 Frontend/web-rest/e2e/src/app.po.ts
 Frontend/web-rest/e2e/tsconfig.json
 Backend/web-rest/target/classes/com/example/webrest/rest/pojo/LoginRequest.class
+Backend/web-rest/target/classes/com/example/webrest/rest/pojo/LoginRequest.class
+Backend/web-rest/target/web-rest/WEB-INF/classes/com/example/webrest/rest/security/CORSFilter.class
+Backend/web-rest/target/thorntail6293699117922654429-cp.txt
+Backend/web-rest/target/classes/com/example/webrest/rest/security/CORSFilter.class
+Backend/web-rest/target/classes/com/example/webrest/rest/pojo/LoginRequest.class
+Backend/web-rest/target/thorntail1411521563242571985-cp.txt
+Backend/web-rest/target/classes/com/example/webrest/rest/resource/AuthenticationResource.class
+Backend/web-rest/target/classes/com/example/webrest/rest/pojo/LoginRequest.class
+Backend/web-rest/target/classes/com/example/webrest/rest/pojo/LoginRequest.class
+Backend/web-rest/target/classes/com/example/webrest/rest/resource/AuthenticationResource.class
+Backend/web-rest/target/classes/com/example/webrest/rest/resource/UserResource.class
+Backend/web-rest/target/thorntail5086473068771723027-cp.txt
