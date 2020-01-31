@@ -81,42 +81,48 @@ _(500) Belső szerverhiba. Nem kezelt kivétel._
 Bejelentkező ablak:
 
 <p align="center">
-<img src="Documentation/loginPage.png" width="450">
+<img src="Documentation/Screenshots/loginPage.png">
 </p>
 
 Regisztrációs ablak:
 
 <p align="center">
-<img src="Documentation/regPage.png" width="450">
+<img src="Documentation/Screenshots/regPage.png">
 </p>
 
 Sikeres regisztráció:
 
 <p align="center">
-<img src="Documentation/regSuccessfull.png" width="450">
+<img src="Documentation/Screenshots/regSuccessfull.png" width="450">
 </p>
 
-Bal menü:
+Sikeres fiókaktiválás:
 
 <p align="center">
-<img src="Documentation/leftMenu.png" width="450">
+<img src="Documentation/Screenshots/activationSuccessfull.PNG" width="450">
+</p>
+
+Sikertelen fiókaktiválás:
+
+<p align="center">
+<img src="Documentation/Screenshots/activationFailed.png" width="450">
 </p>
 
 Felhasználók:
 
 <p align="center">
-<img src="Documentation/users.png" width="450">
+<img src="Documentation/Screenshots/users.png">
 </p>
 
 Felhasználó frissítése:
 
 <p align="center">
-<img src="Documentation/updateUser.png" width="250">
+<img src="Documentation/Screenshots/updateUser.png">
 </p>
 
 Megerősítés:
 
 <p align="center">
-<img src="Documentation/areYouSure.png" width="250">
+<img src="Documentation/Screenshots/areYouSure.png" width="250">
 </p>
 
