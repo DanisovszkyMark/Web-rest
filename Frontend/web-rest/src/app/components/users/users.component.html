@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="usersComponent">
+    <div class="body">
+        <igx-list>
+            <ng-template igxEmptyList>
+                <p class="empty">No users! Then how can you login? :(</p>
+            </ng-template>
+            <ng-template igxDataLoading>
+                <p class="loading">We are currently loading the data...</p>
+            </ng-template>
+
+            <igx-list-item #item *ngFor="let user of users">
+                <p igxListLineSubTitle>{{ user.id }}</p>
+                <h4 igxListLineTitle>{{ user.username }}</h4>
+                <p igxListLineSubTitle>email: {{ user.email }}</p>
+                <p igxListLineSubTitle>enabled: {{ user.enabled }}</p>
+                <i class="fa fa-pencil icon" (click)="onUpdate(item)"></i>
+                <i class="fa fa-trash icon" (click)="onDelete(item)"></i>
+                <i class="fa fa-minus-circle icon" (click)="onBlock(item)"></i>
+            </igx-list-item>
+        </igx-list>
+    </div>
+</div>

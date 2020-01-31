@@ -16,6 +16,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivationSuccessfullPageComponent } from './pages/activation-successfull-page/activation-successfull-page.component';
 import { ActivationFailedPageComponent } from './pages/activation-failed-page/activation-failed-page.component';
 import { ActivationPageComponent } from './pages/activation-page/activation-page.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { UsersComponent } from './components/users/users.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { BlockPageComponent } from './pages/block-page/block-page.component';
+import { SupportPageComponent } from './pages/support-page/support-page.component';
+import { IgxListModule } from 'igniteui-angular';
+import { AreYouSureComponent } from './components/are-you-sure/are-you-sure.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +35,14 @@ import { ActivationPageComponent } from './pages/activation-page/activation-page
     UsersPageComponent,
     ActivationSuccessfullPageComponent,
     ActivationFailedPageComponent,
-    ActivationPageComponent
+    ActivationPageComponent,
+    MenuComponent,
+    UsersComponent,
+    ProfilePageComponent,
+    BlockPageComponent,
+    SupportPageComponent,
+    AreYouSureComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +51,11 @@ import { ActivationPageComponent } from './pages/activation-page/activation-page
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    IgxListModule
   ],
-  entryComponents: [RegSuccessfullComponent],
+  entryComponents: [RegSuccessfullComponent, AreYouSureComponent, UpdateUserComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -29,21 +29,19 @@ export class AuthServiceService {
     });
   }
 
-  public logout(tokenKey: string): Observable<any>{
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    headers.append('Token', tokenKey);
-
-    return this.httpClient.delete("http://localhost:8080/auth/logout", {
-      headers: new HttpHeaders().set('Token', tokenKey),
-    });
-  }
-
   public activation(activationKey: string): Observable<any>{
     return this.httpClient.put("http://localhost:8080/auth/activation/" + activationKey, null);
   }
 
-  public block(id: bigint): Observable<any>{
-    return this.httpClient.put("http://localhost:8080/auth/block/" + id, null);
+  public logout(tokenKey: string): Observable<any>{
+    return this.httpClient.delete("http://localhost:8080/auth/logout", {
+      headers: {'Content-Type' : 'application/json', 'token' : tokenKey}
+    });
+  }
+
+  public block(tokenKey: string, id: bigint): Observable<any>{
+    return this.httpClient.put("http://localhost:8080/auth/block/" + id, {} , {
+      headers: {'Content-Type' : 'application/json', 'token' : tokenKey}
+    });
   }
 }
