@@ -22,6 +22,14 @@ import java.security.InvalidParameterException;
                 @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "success")
         }
 )
+@NamedStoredProcedureQuery(
+        name = "existsToken",
+        procedureName = "existsToken",
+        parameters = {
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_tokenKey"),
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "ex")
+        }
+)
 public class Token {
 
     @Id

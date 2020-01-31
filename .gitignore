@@ -306,3 +306,5 @@ Backend/web-rest/target/classes/com/example/webrest/rest/pojo/LoginRequest.class
 Backend/web-rest/target/classes/com/example/webrest/rest/resource/AuthenticationResource.class
 Backend/web-rest/target/classes/com/example/webrest/rest/resource/UserResource.class
 Backend/web-rest/target/thorntail5086473068771723027-cp.txt
+Backend/web-rest/target/classes/com/example/webrest/rest/database/UsersManager.class
+Backend/web-rest/target/classes/com/example/webrest/rest/resource/UserResource.class

@@ -32,6 +32,17 @@ public class UsersManager extends BaseDatabaseManager {
     }
 
     @Transactional
+    public Boolean updateUserWithoutPassword(long id, String username, String email){
+        StoredProcedureQuery query = this.getEntityManager().createNamedStoredProcedureQuery("updateUserWithoutPassword");
+        query.setParameter("p_id", id);
+        query.setParameter("p_username", username);
+        query.setParameter("p_email", email);
+        query.execute();
+
+        return (Boolean)query.getOutputParameterValue("success");
+    }
+
+    @Transactional
     public boolean deleteUser(long id){
         StoredProcedureQuery query = this.getEntityManager().createNamedStoredProcedureQuery("deleteUser");
         query.setParameter("p_id", id);

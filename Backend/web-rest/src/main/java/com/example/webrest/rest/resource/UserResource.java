@@ -64,11 +64,21 @@ public class UserResource {
     @Consumes(MediaType.APPLICATION_JSON) //415 ha unsupported media type
     @AuthenticationRequired
     public Response updateUser(@PathParam("id") long id, UpdateRequest updateRequest){
-        if (this.usersManager.updateUser(id, updateRequest.getUsername(), updateRequest.getPassword(), updateRequest.getEmail())) {
-            return Response.ok(200).build();
+        if(updateRequest.getPassword() != null){
+            if (this.usersManager.updateUser(id, updateRequest.getUsername(), updateRequest.getPassword(), updateRequest.getEmail())) {
+                return Response.ok(200).build();
+            }
+
+            return Response.status(409).build();
+        }
+        else{
+            if (this.usersManager.updateUserWithoutPassword(id, updateRequest.getUsername(), updateRequest.getEmail())) {
+                return Response.ok(200).build();
+            }
+
+            return Response.status(409).build();
         }
 
-        return Response.status(409).build();
     }//200, 409, 500, 503  (ha az id rossz akkor is 409 a válasz, ezt illik javítani később)
 
     @DELETE

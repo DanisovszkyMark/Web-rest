@@ -20,6 +20,16 @@ import org.wildfly.swarm.spi.runtime.annotations.ConfigurationValue;
         }
 )
 @NamedStoredProcedureQuery(
+        name = "updateUserWithoutPassword",
+        procedureName = "UpdateUserWithoutPassword",
+        parameters = {
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "p_id"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_username"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "p_email"),
+                @StoredProcedureParameter(mode = ParameterMode.OUT, type = Boolean.class, name = "success")
+        }
+)
+@NamedStoredProcedureQuery(
         name = "deleteUser",
         procedureName = "deleteUser",
         parameters = {

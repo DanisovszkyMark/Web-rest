@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 @Provider
 public class AuthenticationFilter implements ContainerRequestFilter {
 
-    public static final String TOKEN_KEY = "Token";
+    public static final String TOKEN_KEY = "token";
 
     @Context
     private ResourceInfo resourceInfo;

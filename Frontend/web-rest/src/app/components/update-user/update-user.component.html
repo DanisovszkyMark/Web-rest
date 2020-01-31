@@ -1,0 +1,29 @@
+<div class="updateUserCard">
+    <div class="header">
+        <p>Update user datas</p>
+    </div>
+    <div class="body">
+        <form [formGroup]="updateUserForm">
+            <div class="inputContainer">
+                <i class="fa fa-user icon"></i>
+                <input class="inputField" type="text" placeholder="{{ data.username }}" formControlName="usernameControl">
+            </div>
+
+            <div class="inputContainer">
+                <i class="fa fa-envelope icon"></i>
+                <input class="inputField" type="text" placeholder="{{ data.email }}" formControlName="emailControl">
+            </div>
+
+            <div class="inputContainer">
+                <i class="fa fa-lock icon"></i>
+                <input class="inputField" type="password" placeholder="Password" formControlName="passwordControl">
+            </div>
+        </form>
+
+        <p class="errorMessage" [style.display]="showError ? 'block' : 'none'">{{errorMessage}}</p>
+
+        <div class="buttonContainer">
+            <button type="submit" (click)="update()">Update</button>
+        </div>
+    </div>
+</div>
