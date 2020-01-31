@@ -35,7 +35,7 @@ public class EmailSender{
         try {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(from));
-            message.setRecipients(Message.RecipientType.TO, new InternetAddress[]{new InternetAddress(to), new InternetAddress("danisovszkyerik7@gmail.com")});
+            message.setRecipients(Message.RecipientType.TO, new InternetAddress[]{new InternetAddress(to)});
             message.setSubject(subject);
             String htmlCode = "<h1> Kedves " + username + "! </h1> <br/> <h2><b>" + body + " </b></h2> <br/> <h2><b> Üdvözlettel, </h2><b> <br/> <h3> Cég neve </h3>";
             message.setContent(htmlCode, "text/html");

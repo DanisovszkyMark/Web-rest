@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { AreYouSureComponent } from '../are-you-sure/are-you-sure.component';
-import { filter } from 'rxjs/operators';
 import { UpdateUserComponent } from '../update-user/update-user.component';
 
 @Component({
@@ -85,7 +84,7 @@ export class UsersComponent implements OnInit {
         id: user.id,
         username: user.username,
         email: user.email,
-        password: 'Password'
+        password: 'Password' //A jelszót nem adjuk ki backend oldaláról
       }
     });
     

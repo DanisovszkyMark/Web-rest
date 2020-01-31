@@ -52,7 +52,7 @@ export class UpdateUserComponent implements OnInit {
 
     this.newEmail = this.data.email;
     if(emailControl.length > 3){
-      this.newEmail = emailControl; //email validálása
+      this.newEmail = emailControl;
     }
 
     this.newPassword = this.data.password;

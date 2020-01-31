@@ -1,10 +1,8 @@
 package com.example.webrest.rest.entity;
 
-import javax.inject.Inject;
 import javax.persistence.*;
 import java.security.InvalidParameterException;
 import org.apache.commons.validator.routines.EmailValidator;
-import org.wildfly.swarm.spi.runtime.annotations.ConfigurationValue;
 
 @Entity
 @Table(name = "Users")

@@ -1,9 +1,5 @@
 package com.example.webrest.rest.pojo;
 
-import org.wildfly.swarm.spi.runtime.annotations.ConfigurationValue;
-
-import javax.inject.Inject;
-import javax.resource.spi.ConfigProperty;
 import java.security.InvalidParameterException;
 
 public class LoginRequest {

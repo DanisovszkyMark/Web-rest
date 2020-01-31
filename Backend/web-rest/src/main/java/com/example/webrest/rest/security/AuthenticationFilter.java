@@ -1,7 +1,6 @@
 package com.example.webrest.rest.security;
 
 import com.example.webrest.rest.database.AuthenticationManager;
-
 import javax.inject.Inject;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
