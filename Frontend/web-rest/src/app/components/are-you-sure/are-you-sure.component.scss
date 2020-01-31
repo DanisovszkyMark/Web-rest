@@ -1,0 +1,45 @@
+.areYouSureCard {
+    background-color: white;
+    padding: 15px;
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    border-radius: 20%;
+}
+
+.header {
+    margin-bottom: 30%;
+}
+
+p {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.buttonContainer {
+    display: flex;
+}
+
+.okIcon {
+    text-align: center;
+    width: 50%;
+    font-size: 2rem;
+    color: green;
+    opacity: 0.5;
+}
+
+.okIcon:hover {
+    opacity: 1;
+}
+
+.noIcon {
+    text-align: center;
+    width: 50%;
+    font-size: 2rem;
+    color: red;
+    opacity: 0.5;
+}
+
+.noIcon:hover {
+    opacity: 1;
+}
