@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="menu">
+
+    <div class="menuHeader">
+        <p>Logo here</p>
+    </div>
+
+    <div class="menuItem" (click)="profileClick()">
+        <i class="fa fa-address-card icon"></i>
+        <p>Profile</p>
+    </div>
+
+    <div class="activeMenuItem">
+        <i class="fa fa-users icon"></i>
+        <p>Users</p>
+    </div>
+
+    <div class="menuItem" (click)="blockClick()">
+        <i class="fa fa-ban icon"></i>
+        <p>Block</p>
+    </div>
+
+    <div class="menuItem" (click)="supportClick()">
+        <i class="fa fa-life-ring icon"></i>
+        <p>Support</p>
+    </div>
+
+    <div class="menuItem" (click)="logoutClick()">
+        <i class="fa fa-sign-out icon"></i>
+        <p>Log out</p>
+    </div>
+
+</div>
