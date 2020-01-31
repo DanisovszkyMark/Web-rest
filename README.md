@@ -76,7 +76,33 @@ _(409) Konfliktus. A kért erőforrás már létezik._
 
 _(500) Belső szerverhiba. Nem kezelt kivétel._
 
-# Frontend
+# Frontend demók
+
+Regisztráció demó:
+
+<p align="center">
+<img src="Documentation/Gifs/Registration.gif">
+</p>
+
+Aktiválás demó:
+
+<p align="center">
+<img src="Documentation/Gifs/Activation.gif">
+</p>
+
+Bejelentkezés demó:
+
+<p align="center">
+<img src="Documentation/Gifs/Login.gif">
+</p>
+
+CRUD demó:
+
+<p align="center">
+<img src="Documentation/Gifs/CRUD.gif">
+</p>
+
+# Frontend képernyőképek
 
 Bejelentkező ablak:
 
@@ -99,13 +125,13 @@ Sikeres regisztráció:
 Sikeres fiókaktiválás:
 
 <p align="center">
-<img src="Documentation/Screenshots/activationSuccessfull.PNG" width="450">
+<img src="Documentation/Screenshots/activationSuccessfull.PNG">
 </p>
 
 Sikertelen fiókaktiválás:
 
 <p align="center">
-<img src="Documentation/Screenshots/activationFailed.png" width="450">
+<img src="Documentation/Screenshots/activationFailed.png">
 </p>
 
 Felhasználók:
